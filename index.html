@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Every Joule KZ — энергия туралы 3D кітап</title>
+<meta name="description" content="Энергия туралы интерактивті 3D кітап, қазақ тілінде. 10 сабақ: болжа, тексер, дәлелде.">
+<meta property="og:title" content="Every Joule KZ — энергия туралы 3D кітап">
+<meta property="og:description" content="10 интерактивті сабақ: энергия қорлары, кинетикалық және потенциалдық энергия, қуат, ПӘК, электр желісі, энергияның сақталу заңы.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='22' rx='3' fill='%23fbf6ea' stroke='%2323212b' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff7a1a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/book.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./assets/vendor/three.module.min.js",
+  "three/addons/controls/OrbitControls.js": "./assets/vendor/OrbitControls.js"
+} }
+</script>
+</head>
+<body>
+<a class="skip" href="#app">Мазмұнға өту</a>
+<header class="top">
+  <a class="brand" href="#/"><span class="logo"></span>Every Joule KZ</a>
+  <nav>
+    <a href="#/">Мазмұны</a>
+    <a href="teachers.html">Мұғалімге</a>
+    <a href="sources.html">Дереккөздер</a>
+    <span class="stamps" title="Жиналған мөрлер"><span class="seal-mini"></span><b id="stamp-count">0</b>/10</span>
+  </nav>
+</header>
+
+<main id="app">
+  <!-- Мұқаба және мазмұны -->
+  <section id="cover" class="view">
+    <div class="cover">
+      <p class="kicker">Энергия туралы 3D кітап</p>
+      <h1>Every<br>Joule <span>KZ</span></h1>
+      <p class="lead">Мәтін мен жалпақ сызбалардың орнына — қолмен ойнауға болатын тәжірибелер. Әр сабақта алдымен <b>болжайсың</b>, сосын 3D сахнада <b>тексересің</b>, соңында формуламен <b>дәлелдейсің</b>.</p>
+      <a class="btn primary" href="#/1">Кітапты ашу →</a>
+    </div>
+    <ol class="toc" id="toc"></ol>
+  </section>
+
+  <!-- Сабақ -->
+  <section id="lesson" class="view" hidden>
+    <div class="spread">
+      <article class="page left">
+        <p class="num" id="l-num"></p>
+        <h2 id="l-title"></h2>
+        <p class="intro" id="l-intro"></p>
+        <div class="steps" role="tablist">
+          <button role="tab" data-step="0"><i>1</i>Болжа</button>
+          <button role="tab" data-step="1"><i>2</i>Тексер</button>
+          <button role="tab" data-step="2"><i>3</i>Дәлелде</button>
+        </div>
+        <div class="step-body" id="step-0">
+          <p class="q" id="p-q"></p>
+          <div class="opts" id="p-opts"></div>
+          <p class="note" id="p-note"></p>
+        </div>
+        <div class="step-body" id="step-1" hidden>
+          <p id="t-hint"></p>
+          <div class="controls" id="controls"></div>
+          <div class="readout" id="readout"></div>
+        </div>
+        <div class="step-body" id="step-2" hidden>
+          <div id="proof"></div>
+          <div class="flap" id="flap">
+            <button class="flap-cover" id="flap-btn">Жауапты көру үшін қақпақты аш ↑</button>
+            <div class="flap-inner" id="flap-inner"></div>
+          </div>
+        </div>
+      </article>
+      <div class="page right">
+        <div class="stage" id="stage">
+          <div class="bars" id="bars"></div>
+          <p class="stage-hint">Айналдыру үшін сүйре · масштаб — дөңгелекше</p>
+          <div class="seal" id="seal" hidden><span>ДҰРЫС<br>БОЛЖАМ</span></div>
+        </div>
+      </div>
+    </div>
+    <nav class="pager">
+      <a id="prev" class="btn">← Алдыңғы</a>
+      <a href="#/" class="btn ghost">Мазмұны</a>
+      <a id="next" class="btn">Келесі →</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>«Every Joule KZ» · авторы Макс · MIT лицензиясы</span>
+  <span>Techartist-тің <a href="https://iamtechartist.com/every-joule/" target="_blank" rel="noopener">Every Joule</a> кітабынан шабыт алынған</span>
+</footer>
+
+<noscript><p class="noscript">Кітап жұмыс істеуі үшін JavaScript қосулы болуы керек.</p></noscript>
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>
